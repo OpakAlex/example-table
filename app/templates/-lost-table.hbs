@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+<div class="panel-heading">Lost Items
+    <div class="pull-right">
+        <form class="">
+            {{input type="text" value=searchLostInput placeholder="Search..."}}
+        </form>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Place lost</th>
+            <th>Found on</th>
+            <th>Found by</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each item in lostItems}}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.place_title}}</td>
+            <td>{{item.found_on}}</td>
+            <td>{{item.found_by}}</td>
+            <td>{{item.status}}</td>
+            <td>{{#link-to 'items.edit' item}}Edit{{/link-to}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,128 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">User</h3>
+              </div>
+              <div class="panel-body">
+                  <ul>
+                    <li>id: {{model.id}}</li>
+                    <li>city: {{model.city}}</li>
+                    <li>country: {{model.country}}</li>
+                    <li>email: {{model.email}}</li>
+                    <li>first_name: {{model.first_name}}</li>
+                    <li>hashed_password: {{model.hashed_password}}</li>
+                    <li>hotelUsername: {{model.hotelUsername}}</li>
+                    <li>image: {{model.image}}</li>
+                    <li>last_name: {{model.last_name}}</li>
+                    <li>permissionsId: {{model.permissionsId}}</li>
+                    <li>salt: {{model.salt}}</li>
+                    <li>state: {{model.state}}</li>
+                    <li>street: {{model.street}}</li>
+                    <li>username: {{model.username}}</li>
+                    <li>zip: {{model.zip}}</li>
+                    <li>isReceptionist: {{model.isReceptionist}}</li>
+                    <li>isMaintenance: {{model.isMaintenance}}</li>
+                    <li>isInspector: {{model.isInspector}}</li>
+                    <li>isBypassAttendant: {{model.isBypassAttendant}}</li>
+                    <li>isAttendant: {{model.isAttendant}}</li>
+                    <li>isAdministrator: {{model.isAdministrator}}</li>
+                    <li>language: {{model.language}}</li>
+                    <li>role: {{model.role}}</li>
+                    <li>status: {{model.status}}</li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Hotel</h3>
+              </div>
+              <div class="panel-body">
+                <ul>
+                    <li> id: {{hotel.id}} </li>
+                    <li> city: {{hotel.city}} </li>
+                    <li> country: {{hotel.country}} </li>
+                    <li> images: {{hotel.images}} </li>
+                    <li> name: {{hotel.name}} </li>
+                    <li> organizationEmail: {{hotel.organizationEmail}} </li>
+                    <li> phone: {{hotel.phone}}</li>
+                    <li> remarks: {{hotel.remarks}} </li>
+                    <li> state: {{hotel.state}} </li>
+                    <li> street: {{hotel.street}} </li>
+                    <li> username: {{hotel.username}} </li>
+                    <li> zip: {{hotel.zip}} </li>
+                    <li> departureMultiplier: {{hotel.departureMultiplier}} </li>
+                    <li> stayMultiplier: {{hotel.stayMultiplier}}</li>
+                    <li>vacantMultiplier: {{hotel.vacantMultiplier}} </li>
+                    <li> creditMinutes: {{hotel.creditMinutes}} </li>
+                    <li> isHideGuestInfo: {{hotel.isHideGuestInfo}} </li>
+                    <li> isAllNightly: {{hotel.isAllNightly}} </li>
+                    <li> isOCCNightly: {{hotel.isOCCNightly}} </li>
+                    <li> organizations: {{hotel.organizations}} </li>
+                    <li> floors: {{hotel.floors}}</li>
+                    <li> users: {{hotel.users}} </li>
+                    <li> notes: {{hotel.notes}} </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Rooms</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+                {{#each room in hotel.rooms}}
+                    <ul>
+                        <li>id: {{room.id}}</li>
+                        <li>name: {{room.name}}</li>
+                    </ul>
+                {{/each}}
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Room statuses</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+                {{#each roomStatus in hotel.roomStatuses}}
+                    <ul>
+                        <li>id: {{roomStatus.id}}</li>
+                        <li>name: {{roomStatus.label}}</li>
+                    </ul>
+                {{/each}}
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">room Housekeepings</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+                {{#each room in hotel.roomHousekeepings}}
+                    <ul>
+                        <li>id: {{room.id}}</li>
+                        <li>name: {{room.label}}</li>
+                    </ul>
+                {{/each}}
+            </ul>
+          </div>
+        </div>
+    </div>
+</div>

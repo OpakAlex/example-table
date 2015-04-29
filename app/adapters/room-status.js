@@ -1,4 +1,5 @@
 import applicationAdapter from './application';
+import Ember from 'ember';
 
 export default applicationAdapter.extend({
   pathForType: function(type) {

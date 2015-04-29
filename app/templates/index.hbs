@@ -125,4 +125,22 @@
           </div>
         </div>
     </div>
+
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">assetsroom</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+                {{#each room in hotel.assetsrooms}}
+                    <ul>
+                        <li>id: {{room.id}}</li>
+                        <li>name: {{room.assetStatus}}</li>
+                    </ul>
+                {{/each}}
+            </ul>
+          </div>
+        </div>
+    </div>
 </div>

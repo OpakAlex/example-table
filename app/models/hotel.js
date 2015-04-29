@@ -35,5 +35,9 @@ export default DS.Model.extend({
 
   roomHousekeepings: function(){
     return this.store.find('room-housekeeping', {hotel: this.get('id')});
+  }.property('id'),
+
+  assetsrooms: function(){
+    return this.store.find('assetsroom', {hotel: this.get('id')});
   }.property('id')
 });
